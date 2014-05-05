@@ -1,0 +1,60 @@
+
+
+CUSTOMISATIONS
+--------------
+
+SurveyManager - Manual additions and amendments
+
+Changed files:
+  * lib/SurveyManager/Api/Base/Search.php (renamed for now to SearchNO.php to disable it)
+  * lib/SurveyManager/Entity/Base/Survey.php (lines 1376 and 1378)
+  * lib/SurveyManager/Entity/Base/ResponseData.php (line 744-747)
+  * lib/SurveyManager/Entity/Base/Page.php (line 64, 143, 601 changed to 'approved')
+  * lib/SurveyManager/Entity/Base/Question.php (line 64, 143, 601 changed to 'approved')
+  * lib/SurveyManager/Entity/Base/Response.php (line 64, 143, 601 changed to 'approved')
+  * lib/SurveyManager/Entity/Base/ResponseData.php (line 64, 143, 601 changed to 'approved')
+  * lib/SurveyManager/Entity/Base/Survey.php (line 64, 143, 601 changed to 'approved')
+  
+
+Implemented classes:
+  * lib/SurveyManager/Api/Account.php
+  * lib/SurveyManager/Api/Admin.php
+  * lib/SurveyManager/Api/Search.php
+  * lib/SurveyManager/Api/Selection.php
+  * lib/SurveyManager/Api/User.php
+  * lib/SurveyManager/Controller/Admin.php
+  * lib/SurveyManager/Controller/User.php
+  * lib/SurveyManager/Entity/Repository/Survey.php
+  * lib/SurveyManager/Entity/Question.php
+  * lib/SurveyManager/Entity/Response.php
+  * lib/SurveyManager/Entity/ResponseData.php
+  * lib/SurveyManager/Form/Handler/Admin/Config.php
+  * lib/SurveyManager/Form/Handler/Admin/Page/Edit.php
+  * lib/SurveyManager/Form/Handler/Admin/Question/Edit.php
+  * lib/SurveyManager/Form/Handler/Admin/Response/Edit.php
+  * lib/SurveyManager/Form/Handler/Admin/Survey/Edit.php
+  * lib/SurveyManager/Installer.php
+  * lib/SurveyManager/Validator.php
+  * lib/SurveyManager/Version.php
+
+Additional files:
+  * images/admin.gif
+  * images/closed_arrow.gif
+  * images/l.gif
+  * images/open_arrow.gif
+  * javascript/SurveyManager_utils.js
+  * javascript/SurveyManager_wizard.js
+  * lib/SurveyManager/AbstractQuestionType.php
+  * lib/SurveyManager/Block/Display.php
+  * lib/SurveyManager/Block/FeaturedResponse.php
+  * lib/SurveyManager/Form/Handler/Admin/Wizard.php
+  * lib/SurveyManager/QuestionType/*.php
+  * lib/SurveyManager/Util/Manual.php
+  * lib/SurveyManager/Util/Thumbnail.php
+  * lib/SurveyManager/Util/Upload.php
+  * style/manual.css
+  * templates/plugins/function.surveymanagerHasResponseValue.php
+  * templates/plugins/modifier.linebreaks.php
+  * templates/plugins/modifier.prepforcsv.php
+
+Overridden templates in /config.

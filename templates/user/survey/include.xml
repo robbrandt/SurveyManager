@@ -1,0 +1,48 @@
+{* purpose of this template: surveys xml inclusion template in user area *}
+<survey id="{$item.id}" createdon="{$item.createdDate|dateformat}" updatedon="{$item.updatedDate|dateformat}">
+    <id>{$item.id}</id>
+    <name><![CDATA[{$item.name}]]></name>
+    <description><![CDATA[{$item.description}]]></description>
+    <thankYou><![CDATA[{$item.thankYou}]]></thankYou>
+    <thankYouTitle><![CDATA[{$item.thankYouTitle}]]></thankYouTitle>
+    <thankYouAlternativeUrl>{$item.thankYouAlternativeUrl}</thankYouAlternativeUrl>
+    <weight>{$item.weight}</weight>
+    <maxPerIp>{$item.maxPerIp}</maxPerIp>
+    <maxPerUserId>{$item.maxPerUserId}</maxPerUserId>
+    <useCaptcha>{if !$item.useCaptcha}0{else}1{/if}</useCaptcha>
+    <recipients>{$item.recipients}</recipients>
+    <responseSubject><![CDATA[{$item.responseSubject}]]></responseSubject>
+    <confirmationSubject><![CDATA[{$item.confirmationSubject}]]></confirmationSubject>
+    <confirmationBody><![CDATA[{$item.confirmationBody}]]></confirmationBody>
+    <archived>{if !$item.archived}0{else}1{/if}</archived>
+    <template>{if !$item.template}0{else}1{/if}</template>
+{if $modvars.SurveyManager.useAddition1}
+    <addition1><![CDATA[{$item.addition1}]]></addition1>
+{/if}
+{if $modvars.SurveyManager.useAddition2}
+    <addition2><![CDATA[{$item.addition2}]]></addition2>
+{/if}
+{if $modvars.SurveyManager.useAddition3}
+    <addition3><![CDATA[{$item.addition3}]]></addition3>
+{/if}
+{if $modvars.SurveyManager.useAddition4}
+    <addition4><![CDATA[{$item.addition4}]]></addition4>
+{/if}
+{if $modvars.SurveyManager.useAddition5}
+    <addition5><![CDATA[{$item.addition5}]]></addition5>
+{/if}
+    <pages>
+    {if isset($item.Pages) && $item.Pages ne null}
+        {foreach name='relationLoop' item='relatedItem' from=$item.Pages}
+        <page>{$relatedItem.Pages.name|default:''}</page>
+        {/foreach}
+    {/if}
+    </pages>
+    <responses>
+    {if isset($item.Responses) && $item.Responses ne null}
+        {foreach name='relationLoop' item='relatedItem' from=$item.Responses}
+        <response>{$relatedItem.Responses.ipAddress|default:''}</response>
+        {/foreach}
+    {/if}
+    </responses>
+</survey>

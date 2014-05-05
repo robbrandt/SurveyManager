@@ -1,0 +1,183 @@
+div.z-module-surveymanager h2 {
+color: #afbd21;
+}
+
+/* admin view survey */
+table.surveymanager_survey_list {
+border: 1px solid #000;
+margin: 8px 0 0 0;
+width: 100%;
+}
+
+table.surveymanager_survey_list tr {
+border: 0px;
+}
+
+table.surveymanager_survey_list th {
+border: none;
+font-weight: 700;
+padding: 1px 4px;
+}
+
+table.surveymanager_survey_list td {
+border: none;
+padding: 1px 4px;
+}
+
+table.surveymanager_survey_list td a {
+color: #646169;
+}
+
+table.surveymanager_survey_list td.surveymanager_swatch_cell {
+text-align: center;
+font-weight: 700;
+}
+
+table.surveymanager_survey_list td.surveymanager_swatch_cell span.surveymanager_survey_swatch {
+background-color: #ffaeae;
+}
+
+table.surveymanager_survey_list td.surveymanager_swatch_cell span.surveymanager_page_swatch {
+background-color: #f8ffc7;
+margin-right: 12px;
+margin-left: 12px;
+}
+
+table.surveymanager_survey_list td.surveymanager_swatch_cell span.surveymanager_question_swatch {
+background-color: #affdaf;
+}
+
+.z-icon-es-up {
+background: url("../../../images/icons/extrasmall/14_layer_raiselayer.png") no-repeat scroll 0 50% transparent;
+padding: 2px 0 2px 20px;
+}
+
+.z-icon-es-down {
+background: url("../../../images/icons/extrasmall/14_layer_lowerlayer.png") no-repeat scroll 0 50% transparent;
+padding: 2px 0 2px 20px;
+}
+
+.z-icon-es-expand {
+background: url("../images/closed_arrow.gif") no-repeat scroll 0 50% transparent;
+padding: 2px 0 2px 20px;
+}
+
+.z-icon-es-collapse {
+background: url("../images/open_arrow.gif") no-repeat scroll 0 50% transparent;
+padding: 2px 0 2px 20px;
+}
+
+table.surveymanager_survey_list tr.surveymanager_survey_row {
+background-color: #ffaeae;
+}
+
+table.surveymanager_survey_list tr.surveymanager_page_row {
+background-color: #f8ffc7;
+}
+
+table.surveymanager_survey_list tr.surveymanager_page_row td.surveymanager_page_cell {
+padding-left: 10px;
+}
+
+table.surveymanager_survey_list tr.surveymanager_question_row {
+background-color: #affdaf;
+}
+
+table.surveymanager_survey_list tr.surveymanager_question_row td.surveymanager_question_cell {
+padding-left: 44px;
+}
+
+/* admin view response */
+div.surveymanager_response_jump {
+margin-top: 8px;
+}
+
+div.surveymanager-response.surveymanager-view table tbody tr td a {
+color: #646169;
+}
+
+/* wizard */
+#surveymanager_wizard_core, #surveymanager_wizard_new {
+float: left;
+margin: 10px 10px 0 10px;
+padding: 10px;
+background: #ffaeae;
+border: 1px solid #656565;    
+width: 600px;
+}
+
+/*IE6 Hack*/
+/*\*/ * html #surveymanager_wizard_core { margin-left: 5px; } /**/
+/*\*/ * html #surveymanager_wizard_new { margin-left: 5px; } /**/
+
+#surveymanager_wizard_new {
+margin-top: 0;
+background: #affdaf;
+}
+
+a.surveymanager_wizard_toggle {
+margin-left: 12px;
+}
+a.surveymanager_wizard_toggle,
+a.surveymanager_wizard_toggle img,
+span.surveymanager_wizard_toggle {
+line-height: 16px;
+vertical-align: middle;
+}
+
+ul.question_list { 
+list-style-type: none !important;
+margin: 0;
+padding: 0;
+}
+
+ul.question_list li {
+cursor: move;
+margin: 0 10px;
+padding: 10px;
+background: #affdaf;
+border: 1px solid #656565;    
+width: 600px;
+}
+
+ul.question_list li img {
+margin-right: 8px;
+}
+
+ul.question_list li ul li {
+width: 400px;
+}
+
+
+/* user display */
+div.surveymanager_step_display {
+clear: both;
+padding-top: 4px;
+}
+
+div.surveymanager_page_description {
+margin: 8px 0;
+}
+div.surveymanager_question_display {
+clear: both;
+}
+div.surveymanager_display_data_entry_field {
+margin-top: 8px;
+margin-bottom: 8px;
+}
+div.surveymanager_display_data_entry_field p {
+color: #f00;
+}
+
+/* general classes */
+div.surveymanager_clearance {
+clear: both;
+height: 20px;
+overflow: hidden;
+}
+
+/* emails */
+div.surveymanager_email_form_row {
+clear: both;
+padding-top: 4px;
+}

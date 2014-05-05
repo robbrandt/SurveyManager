@@ -1,0 +1,20 @@
+{* purpose of this template: surveys view csv view in admin area *}
+{surveymanagerTemplateHeaders contentType='text/comma-separated-values; charset=iso-8859-15' asAttachment=true filename='Surveys.csv'}
+"{gt text='Name'}";"{gt text='Description'}";"{gt text='Thank you'}";"{gt text='Thank you title'}";"{gt text='Thank you alternative url'}";"{gt text='Weight'}";"{gt text='Max per ip'}";"{gt text='Max per user id'}";"{gt text='Use captcha'}";"{gt text='Recipients'}";"{gt text='Response subject'}";"{gt text='Confirmation subject'}";"{gt text='Confirmation body'}";"{gt text='Archived'}";"{gt text='Template'}"{if $modvars.SurveyManager.useAddition1};"{gt text='Addition1'}"{/if}{if $modvars.SurveyManager.useAddition2};"{gt text='Addition2'}"{/if}{if $modvars.SurveyManager.useAddition3};"{gt text='Addition3'}"{/if}{if $modvars.SurveyManager.useAddition4};"{gt text='Addition4'}"{/if}{if $modvars.SurveyManager.useAddition5};"{gt text='Addition5'}"{/if}
+;"{gt text='Pages'}";"{gt text='Responses'}"
+{foreach item='survey' from=$items}
+    "{$survey.name|replace:"\"":""}";"{$survey.description|replace:"\"":""}";"{$survey.thankYou|replace:"\"":""}";"{$survey.thankYouTitle|replace:"\"":""}";"{$survey.thankYouAlternativeUrl}";"{$survey.weight|replace:"\"":""}";"{$survey.maxPerIp|replace:"\"":""}";"{$survey.maxPerUserId|replace:"\"":""}";"{$survey.useCaptcha|yesno:true}";"{$survey.recipients|replace:"\"":""}";"{$survey.responseSubject|replace:"\"":""}";"{$survey.confirmationSubject|replace:"\"":""}";"{$survey.confirmationBody|replace:"\"":""}";"{$survey.archived|yesno:true}"{if $modvars.SurveyManager.useAddition1};"{$survey.addition1|replace:"\"":""}"{/if}{if $modvars.SurveyManager.useAddition2};"{$survey.addition2|replace:"\"":""}"{/if}{if $modvars.SurveyManager.useAddition3};"{$survey.addition3|replace:"\"":""}"{/if}{if $modvars.SurveyManager.useAddition4};"{$survey.addition4|replace:"\"":""}"{/if}{if $modvars.SurveyManager.useAddition5};"{$survey.addition5|replace:"\"":""}"{/if}
+    ;"
+    {if isset($survey.Pages) && $survey.Pages ne null}
+        {foreach name='relationLoop' item='relatedItem' from=$item.Pages}
+        {$relatedItem.Pages.name|default:''}{if !$smarty.foreach.relationLoop.last}, {/if}
+        {/foreach}
+    {/if}
+    ";"
+    {if isset($survey.Responses) && $survey.Responses ne null}
+        {foreach name='relationLoop' item='relatedItem' from=$item.Responses}
+        {$relatedItem.Responses.ipAddress|default:''}{if !$smarty.foreach.relationLoop.last}, {/if}
+        {/foreach}
+    {/if}
+    "
+{/foreach}
