@@ -20,6 +20,7 @@ Significant features include:
 *  Response confirmations can be customized and emailed to survey takers
 *  Surveys can be marked as archived, or as templates to be copied (not yet supported)
 *  Each "question" can have a correct answer if scoring responses is needed
+*  Export data in csv format.
   
 Included question types include
 *  Decimal/Integer numbers
