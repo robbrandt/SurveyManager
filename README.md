@@ -9,39 +9,3 @@ For questions and other remarks visit our homepage http://zikula.org.
 
 Zikula Development Team (info@zikula.org)
 http://zikula.org
-
-Survey Manager is a Zikula module that can be used to create multi-page surveys and online forms.
-
-Significant features include:
-*  Question types can be added via a plugin system
-*  Responses can be limited per IP address or username
-*  Responses can be emailed to a list of recipients
-*  Users can be redirectly to a different alternative URL per survey
-*  Response confirmations can be customized and emailed to survey takers
-*  Surveys can be marked as archived, or as templates to be copied (not yet supported)
-*  Each "question" can have a correct answer if scoring responses is needed
-*  Export data in csv format.
-  
-Included question types include
-*  Decimal/Integer numbers
-*  Likert selections (strongly disagree to strongly agree)
-*  multiple selection checkboxes
-*  single selection drop down or radio buttons
-*  Email address validated
-*  URL validated
-*  Long, short or styled text
-*  File or image uploads
-*  Heading (for formatting)
-*  Name Identifier
-*  UserID
-*  Username
-*  Real Name
-  
-History
-==================
-
-Survey Manager was originally written by Benjamin Birney for v7x.  It was essentially useable in that form through Zikula v 1.2x.  It was used heavily in one site by the Botanical Society of America in that form.
-
-To prepare for v 1.3, the BSA commissioned Guite to produce a complete rewrite using MOST 5.5 in early 2013.
-
-With the release of MOST 6.x, it has been updated, lightly tested and released by the BSA.

@@ -14,6 +14,7 @@ Changed files:
   * lib/SurveyManager/Entity/Base/Response.php (line 64, 143, 601 changed to 'approved')
   * lib/SurveyManager/Entity/Base/ResponseData.php (line 64, 143, 601 changed to 'approved')
   * lib/SurveyManager/Entity/Base/Survey.php (line 64, 143, 601 changed to 'approved')
+  * lib/SurveyManager/Form/Handler/Admin/Response/Base/edit.php, line 54-57 hack to stop processing on non-entity.
   
 
 Implemented classes:

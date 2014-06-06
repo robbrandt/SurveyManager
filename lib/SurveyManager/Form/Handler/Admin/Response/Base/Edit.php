@@ -50,6 +50,11 @@ class SurveyManager_Form_Handler_Admin_Response_Base_Edit extends SurveyManager_
     public function initialize(Zikula_Form_View $view)
     {
         parent::initialize($view);
+        
+        // hack to stop on non existent entity
+        if (!$this->entityRef){
+            return false;
+        }
     
         if ($this->mode == 'create') {
             $modelHelper = new SurveyManager_Util_Model($this->view->getServiceManager());

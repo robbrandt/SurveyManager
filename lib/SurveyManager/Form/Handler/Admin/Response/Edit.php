@@ -30,9 +30,16 @@ class SurveyManager_Form_Handler_Admin_Response_Edit extends SurveyManager_Form_
      */
     public function initialize(Zikula_Form_View $view)
     {
+//         if (!$this->entityRef){
+//             return false;
+//         }
         parent::initialize($view);
 
         $response = $this->view->get_template_vars('response');
+        
+        if(!$response){
+            return false;
+        }
 
         // Select survey pages with questions
         $surveyPages = $this->selectEntities(array('ot' => 'page', 'where' => 'tblSurvey.id = \'' . $response['survey']['id'] . '\''));

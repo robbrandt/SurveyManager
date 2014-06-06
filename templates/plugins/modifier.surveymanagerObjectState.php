@@ -21,7 +21,7 @@
  *
  * @return string Enriched and translated workflow state ready for display.
  */
-function smarty_modifier_surveymanagerObjectState($state = 'initial', $uiFeedback = true)
+function smarty_modifier_surveymanagerObjectState($state = 'approved', $uiFeedback = true)
 {
     $serviceManager = ServiceUtil::getManager();
     $workflowHelper = new SurveyManager_Util_Workflow($serviceManager);

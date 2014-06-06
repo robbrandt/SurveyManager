@@ -30,7 +30,9 @@ class SurveyManager_Installer extends SurveyManager_Base_Installer
         }
 
 
-        // insert custom example data
+        // insert custom example data using workflow
+        $action = 'create';
+        $workflowHelper = new SurveyManager_Util_Workflow($this->getServiceManager());
 
         // create a survey
         $survey = new SurveyManager_Entity_Survey();
@@ -38,36 +40,36 @@ class SurveyManager_Installer extends SurveyManager_Base_Installer
         $survey->setDescription($this->__('Use this survey to contact us'));
         $survey->setThankYou($this->__('Thank you for contacting us. Someone will be in touch with you shortly.'));
         $survey->setRecipients(array(System::getVar('adminmail')));
-        $this->entityManager->persist($survey);
+        $success = $workflowHelper->executeAction($survey, $action);
 
         // create a page and add it to the survey
         $page = new SurveyManager_Entity_Page();
         $page->setName($this->__('Contact Us'));
         $page->setDescription($this->__('Please fill out the form below to contact us.'));
         $survey->addPages($page); // calls $page->setSurvey($survey)
-        $this->entityManager->persist($page);
+        $success = $workflowHelper->executeAction($page, $action);
 
-        // create three questions and add them to the page
+        // create three questions and add them to the page using workflow
         $question1 = new SurveyManager_Entity_Question();
         $question1->setName($this->__('Your name'));
         $question1->setQuestionType('name_id');
         $question1->setRequired(true);
         $page->addQuestions($question1); // calls $question1->setPage($page)
-        $this->entityManager->persist($question1);
+        $success = $workflowHelper->executeAction($question1, $action);
 
         $question2 = new SurveyManager_Entity_Question();
         $question2->setName($this->__('Your email address'));
         $question2->setQuestionType('email_from');
         $question2->setRequired(true);
         $page->addQuestions($question2); // calls $question2->setPage($page)
-        $this->entityManager->persist($question2);
+        $success = $workflowHelper->executeAction($question2, $action);
 
         $question3 = new SurveyManager_Entity_Question();
         $question3->setName($this->__('Your message'));
         $question3->setQuestionType('longtext');
         $question3->setRequired(true);
         $page->addQuestions($question3); // calls $question2->setPage($page)
-        $this->entityManager->persist($question3);
+        $success = $workflowHelper->executeAction($question3, $action);
 
         // save everything
         $this->entityManager->flush();

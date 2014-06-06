@@ -201,17 +201,6 @@
             </fieldset>
         {/foreach}
     {/if}
-    
-    {* include return control *}
-    {if $mode eq 'create'}
-        <fieldset>
-            <legend>{gt text='Return control'}</legend>
-            <div class="z-formrow">
-                {formlabel for='repeatcreation' __text='Create another item after save'}
-                {formcheckbox group='survey' id='repeatcreation' readOnly=false}
-            </div>
-        </fieldset>
-    {/if}
 
     {/formtabbedpanel}
     {/formtabbedpanelset}
