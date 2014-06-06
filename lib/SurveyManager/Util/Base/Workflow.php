@@ -43,7 +43,7 @@ class SurveyManager_Util_Base_Workflow extends Zikula_AbstractBase
      *
      * @return array|null The corresponding state information.
      */
-    public function getStateInfo($state = 'initial')
+    public function getStateInfo($state = 'approved')
     {
         $result = null;
         $stateList = $this->getObjectStates();

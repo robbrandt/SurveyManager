@@ -76,7 +76,7 @@ class SurveyManager_Controller_User extends SurveyManager_Controller_Base_User
         
         $selectionArgs = array(
             'ot' => $objectType,
-            'where' => '',
+            'where' => 'tblPages.id IS NOT NULL',
             'orderBy' => $sort . ' ' . $sdir
         );
 
@@ -289,6 +289,7 @@ class SurveyManager_Controller_User extends SurveyManager_Controller_Base_User
 
         // No pages in this survey? Bail out.
         if (empty($currentPage)) {
+            LogUtil::registerError($this->__('Error! This survey has no pages.'));
             return $this->redirect(ModUtil::url($this->name, 'user', 'view'));
         }
 

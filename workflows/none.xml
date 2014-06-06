@@ -30,6 +30,15 @@
             <operation>update</operation>
         </action>
         
+        <action id="update">
+            <title>Update</title>
+            <description>Update content.</description>
+            <permission>edit</permission>
+            <state>approved</state>
+        
+            <operation>update</operation>
+        </action>
+        
         <action id="submit">
             <title>Submit</title>
             <description>Submit content.</description>
